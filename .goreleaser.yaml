@@ -44,3 +44,12 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
+
+signs:
+  - cmd: cosign
+    args:
+      - "sign-blob"
+      - "--output-signature=${signature}"
+      - "${artifact}"
+      - "--yes" # needed on cosign 2.0.0+
+    artifacts: all
