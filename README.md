@@ -8,6 +8,14 @@ This uses [keyless signing of blobs](https://docs.sigstore.dev/signing/signing_w
 
 Have a look at the [GitHub Actions workflow](.github/workflows/releaser.yml) and the [GoReleaser configuration](.goreleaser.yaml).
 
+Release with signatures screenshot below: 
+
+![release with signatures screenshot](images/release-with-signatures.png)
+
+# Why Sigstore?
+
+ With the increase in Supply Chain attacks targeting third party software it is important to attest the integrity of the software you are using. Project Sigstore is a standard for signing, verifying and protecting software supply chains.
+
 # Verify The Artifact
 
 To verify the artifact, you will need to download the artifact, the signature and the certificate.
