@@ -1,6 +1,12 @@
 # gh-cosign-goreleaser
 
-This repository illustrates how to use GitHub, [goreleaser](https://goreleaser.com/) and [cosign](https://docs.sigstore.dev) to release a [Go](https://go.dev) based CLI program.
+This repository illustrates how to use GitHub, [GoReleaser](https://goreleaser.com/) and [cosign](https://docs.sigstore.dev) to release a [Go](https://go.dev) based CLI program. 
+
+# Overview
+
+This uses [keyless signing of blobs](https://docs.sigstore.dev/signing/signing_with_blobs/#keyless-signing-of-blobs-and-files) to provide signatures for binaries built using GitHub Actions, with GoReleaser.
+
+Have a look at the [GitHub Actions workflow](.github/workflows/releaser.yml) and the [GoReleaser configuration](.goreleaser.yaml).
 
 # Verify The Artifact
 

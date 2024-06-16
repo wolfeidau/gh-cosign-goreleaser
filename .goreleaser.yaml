@@ -47,6 +47,7 @@ changelog:
       - "^docs:"
       - "^test:"
 
+# Keyless signing of blobs using sigstore cosign https://docs.sigstore.dev/signing/signing_with_blobs/#keyless-signing-of-blobs-and-files
 signs:
   - cmd: cosign
     signature: "${artifact}.sig"
