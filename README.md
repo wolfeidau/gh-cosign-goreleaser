@@ -14,6 +14,8 @@ cosign verify-blob \
     --certificate-oidc-issuer "https://token.actions.githubusercontent.com" gh-cosign-goreleaser_0.0.1_checksums.txt
 ```
 
+The full certificate identity is `https://github.com/wolfeidau/gh-cosign-goreleaser/.github/workflows/releaser.yml@refs/tags/v0.0.1`
+
 # Read the Certificate
 
 To read the certificate we use openssl and the `.pem` file uploaded with the release, which is a base64 encoded version of the certificate.
@@ -21,8 +23,6 @@ To read the certificate we use openssl and the `.pem` file uploaded with the rel
 ```
 cat gh-cosign-goreleaser_0.0.1_checksums.txt.pem | base64 -d | openssl x509 -text
 ```
-
-The full certificate identity is `https://github.com/wolfeidau/gh-cosign-goreleaser/.github/workflows/releaser.yml@refs/tags/v0.0.1`
 
 # License
 
